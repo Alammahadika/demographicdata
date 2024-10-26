@@ -64,9 +64,14 @@ indonesia = world[world['SOVEREIGNT'] == 'Indonesia']
 indonesia_centroid = indonesia.geometry.centroid
 latitude = indonesia_centroid.y.values[0]
 longitude = indonesia_centroid.x.values[0]
+
 ```
+
 ### Indonesia Cities Population in 2024
 ```py
+import matplotlib.pyplot as plt
+import numpy as np
+
 fig, ax = plt.subplots(figsize=(50, 30))  # size 
 
 # Plot  Indonesia

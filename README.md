@@ -39,17 +39,17 @@ print(datapopulation)
 14            Batam  1,164,352
 15            Bogor  1,099,422
 16        Pekanbaru  1,085,000
-17           Padang     909,04
-18           Malang     843,81
-19        Samarinda     831,46
+17           Padang     90,904
+18           Malang     84,381
+19        Samarinda     83,146
 20         Denpasar    725,314
 21       Balikpapan    695,287
 22           Serang    692,101
 23        Situbondo    685,967
 24        Pontianak    658,685
 25      Banjarmasin    657,663
-26       Jambi City      606,2
-27           Cimahi      568,4
+26       Jambi City      6,062
+27           Cimahi      5,684
 28        Surakarta    522,364
 29           Manado    451,916
 30           Kupang    442,758

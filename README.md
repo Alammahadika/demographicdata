@@ -58,13 +58,19 @@ world = gpd.read_file("/Users/mymac/Desktop/Data Github/ne_110m_admin_0_countrie
 world = gpd.read_file("/Users/mymac/Desktop/Data Github/ne_110m_admin_0_countries.shx")
 
 # filter data to Indonesia geo
-indonesia = world[world['SOVEREIGNT'] == 'Indonesia'] 
+Indonesia = world[world['SOVEREIGNT'] == 'Indonesia'] 
 
 #indonesia geometry centroid data 
-indonesia_centroid = indonesia.geometry.centroid
-latitude = indonesia_centroid.y.values[0]
-longitude = indonesia_centroid.x.values[0]
+Indonesia_centroid = indonesia.geometry.centroid
+latitude = Indonesia_centroid.y.values[0]
+longitude = Indonesia_centroid.x.values[0]
 
+# coordinate indonesia
+print("Latitude:", latitude)
+Latitude: -2.221737936520542
+
+print("Longitude:", longitude)
+Longitude: 117.42340756227364
 ```
 
 ### Indonesia Cities Population in 2024

@@ -60,5 +60,8 @@ world = gpd.read_file("/Users/mymac/Desktop/Data Github/ne_110m_admin_0_countrie
 # filter data to Indonesia geo
 indonesia = world[world['SOVEREIGNT'] == 'Indonesia'] 
 
-
+#indonesia geometry centroid data 
+indonesia_centroid = indonesia.geometry.centroid
+latitude = indonesia_centroid.y.values[0]
+longitude = indonesia_centroid.x.values[0]
 ```

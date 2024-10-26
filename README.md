@@ -165,3 +165,4 @@ plt.show()
 Distribution of Cities by Population: Notice how cities with higher populations (indicated by larger dots and lighter colors) are spread across Indonesia. Based on the map, large cities with high populations are generally located in Java, Sumatra, and Sulawesi. Concentration in Java: It appears that many cities with large populations are located in Java (such as Jakarta, Surabaya, and Bandung). This indicates a concentration of population on this island.
 
 ## [Population Census in Indonesia](https://www.bps.go.id/en/statistics-table/2/MTk3NSMy/jumlah-penduduk-pertengahan-tahun--ribu-jiwa-.html)
+This section makes a basic analysis to display the population census in Indonesia from 2016 to 2024, data collection from the Central Statistics Agency of Indonesia.

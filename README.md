@@ -136,5 +136,5 @@ plt.legend(['City Population'], loc='lower left')
 # show map
 plt.show()
 
-
 ```
+![Indonesia Population Cities](datavisual/citiespopulationidn.png)

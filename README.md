@@ -65,3 +65,38 @@ indonesia_centroid = indonesia.geometry.centroid
 latitude = indonesia_centroid.y.values[0]
 longitude = indonesia_centroid.x.values[0]
 ```
+### Indonesia Cities Population in 2024
+```py
+fig, ax = plt.subplots(figsize=(50, 30))  # size 
+
+# Plot  Indonesia
+Indonesia.plot(ax=ax, color='#a6cee3', edgecolor='black')
+
+#  colormap
+cmap = plt.colormaps['plasma']
+
+# normalization data population
+norm = plt.Normalize(vmin=gdf_cities['Population'].min(), vmax=gdf_cities['Population'].max())
+
+# plot for city with deffent such as population
+gdf_cities.plot(ax=ax, color=cmap(norm(gdf_cities['Population'])),
+                marker='o', markersize=gdf_cities['Population'] / 100000, 
+                label='Population', alpha=0.7)
+
+# add colorbar for showing skala population
+sm = plt.cm.ScalarMappable(cmap=cmap, norm=norm)
+sm.set_array([])
+cbar = fig.colorbar(sm, ax=ax, orientation='horizontal', fraction=0.03, pad=0.04)
+cbar.set_label('Population')
+
+# add title
+plt.title("Population of Major Cities in Indonesia", fontsize=20)
+
+#legenda delete text label city and just show legend
+plt.legend(['City Population'], loc='lower left')
+
+# show map
+plt.show()
+
+
+```

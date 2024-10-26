@@ -3,7 +3,7 @@ This statistical data simulation analysis or demo data on population and demogra
 
 ## Population Largest Cities in Indonesia 
 ### Create Data Base 
-```pyhton
+```py
 import geopandas as gpd
 import matplotlib.pyplot as plt
 import pandas as pd

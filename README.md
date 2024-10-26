@@ -4,15 +4,8 @@ This statistical data simulation analysis or demo data on population and demogra
 ## Population Largest Cities in Indonesia 
 ### Create Data Base 
 ```py
-import geopandas as gpd
-import matplotlib.pyplot as plt
 import pandas as pd
 import csv
-
-# data from natural earth
-world = gpd.read_file("/Users/mymac/Desktop/Data Github/ne_110m_admin_0_countries.shp")
-world = gpd.read_file("/Users/mymac/Desktop/Data Github/ne_110m_admin_0_countries.dbf")
-world = gpd.read_file("/Users/mymac/Desktop/Data Github/ne_110m_admin_0_countries.shx")
 
 # import data from csv 
 datapopulation = pd.read_csv("/Users/mymac/Desktop/Data Github/datapopulation.csv", delimiter=';', header = None) # adjust columns and rows
@@ -54,6 +47,18 @@ print(datapopulation)
 29           Manado    451,916
 30           Kupang    442,758
 
+```
+### Retrieving Indonesia Coordinate Data 
+```py
+import geopandas as gpd
+
+# download data from natural data earth site
+world = gpd.read_file("/Users/mymac/Desktop/Data Github/ne_110m_admin_0_countries.shp")
+world = gpd.read_file("/Users/mymac/Desktop/Data Github/ne_110m_admin_0_countries.dbf")
+world = gpd.read_file("/Users/mymac/Desktop/Data Github/ne_110m_admin_0_countries.shx")
+
+# filter data to Indonesia geo
+indonesia = world[world['SOVEREIGNT'] == 'Indonesia'] 
 
 
 ```

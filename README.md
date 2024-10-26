@@ -73,6 +73,21 @@ print("Longitude:", longitude)
 Longitude: 117.42340756227364
 ```
 
+### Retrieving Indonesia Cities Coordinate Data
+```py
+import geopandas as gpd
+
+citiesidn = gpd.read_file("/Users/mymac/Desktop/Data Github/ne_10m_populated_places_simple.shp")
+citiesidn['Latitude'] = cities.geometry.y
+citiesidn['Longitude'] = cities.geometry.x
+cities_df = cities[['NAME(cities)', 'Latitude', 'Longitude']]
+
+print(cities_df)
+
+
+```
+
+
 ### Indonesia Cities Population in 2024
 ```py
 import matplotlib.pyplot as plt

@@ -83,7 +83,19 @@ citiesidn['Longitude'] = cities.geometry.x
 cities_df = cities[['NAME(cities)', 'Latitude', 'Longitude']]
 
 print(cities_df)
-
+  No Cities    Latitude  Longitude 
+   <dbl> <chr>     <chr>     <chr>     
+      1 Jakarta   -6.175247 106.827049
+      2 Surabaya  -7.245972 112.737827
+      3 Bekasi    -6.234986 106.994544
+      4 Bandung   -6.921553 107.611021
+      5 Medan     3.589665  98.673826 
+      6 Depok     -6.407190 106.815837
+      7 Tangerang -6.176192 106.638216
+      8 Palembang -2.988824 104.756851
+      9 Semarang  -6.990399 110.422910
+     10 Makassar  -5.134296 119.412428
+# ℹ 20 more rows
 
 ```
 

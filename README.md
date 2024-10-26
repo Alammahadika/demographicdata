@@ -4,10 +4,17 @@ This statistical data simulation analysis or demo data on population and demogra
 ## Population Largest Cities in Indonesia 
 ### Create Data Base 
 ```pyhton
+import geopandas as gpd
+import matplotlib.pyplot as plt
+import pandas as pd
+import csv
 
+# data from natural earth
+world = gpd.read_file("/Users/mymac/Desktop/Data Github/ne_110m_admin_0_countries.shp")
+world = gpd.read_file("/Users/mymac/Desktop/Data Github/ne_110m_admin_0_countries.dbf")
+world = gpd.read_file("/Users/mymac/Desktop/Data Github/ne_110m_admin_0_countries.shx")
 
-
-
+# import data from csv 
 
 
 ```

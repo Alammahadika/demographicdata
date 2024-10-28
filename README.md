@@ -242,9 +242,45 @@ The population of Indonesia from 2015 to 2024 continues to increase, with a stab
 
 ## Population Projection 
 This section also makes an analysis of the population projection of Indonesia from 2020 to 2100, data collection form [Country Meters](https://countrymeters.info/en/Indonesia) Purpose of Population Projections Population projections in the field of demography are estimates of the population in the future.
+# Data Base
 ```py
+import pandas as pd
+import csv
 
+# import data 
+populationprojection = pd.read_csv("/Users/mymac/Desktop/Data Github/populationprojection.csv", delimiter=';', header = None)
 
+populationprojection = populationprojection.iloc[1:]
+populationprojection.columns = ["Years", "Population"]
+
+populationprojection = pd.DataFrame({
+    'Years': [2020, 2025, 2030, 2035, 2040, 2045, 2050, 2055, 2060, 2065, 
+              2070, 2075, 2080, 2085, 2090, 2095, 2100],
+    'Population': [272222982, 284751033, 295595241, 304758617, 312134190, 
+                   317731990, 321550683, 323790913, 324704160, 324574724, 
+                   323652781, 322033596, 319781249, 316961616, 313660545, 
+                   309025670, 306025531]
+})
+
+print(populationprojection)
+ Years  Population
+0    2020   272222982
+1    2025   284751033
+2    2030   295595241
+3    2035   304758617
+4    2040   312134190
+5    2045   317731990
+6    2050   321550683
+7    2055   323790913
+8    2060   324704160
+9    2065   324574724
+10   2070   323652781
+11   2075   322033596
+12   2080   319781249
+13   2085   316961616
+14   2090   313660545
+15   2095   309025670
+16   2100   306025531
 
 ````
 

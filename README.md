@@ -196,7 +196,7 @@ datapopulationcensus = pd.Data.Frame({
   'Census':[255.587,258.496,261.355,264.161,266.911,270.209,272.682,275.773,278.696,281.603]
 })
 ```
-## Population Growth 2015-2024
+### Population Growth 2015-2024
 ```py
 ## if want create line visual basic graph
 import pandas as pd
@@ -237,5 +237,7 @@ fig.show()
 ```
 ![Indonesia Population](datavisual/indonesiapopulationgrowth.png)
 
-## Indonesia Population Growth
+### Indonesia Population Growth
 The population of Indonesia from 2015 to 2024 continues to increase, with a stable growth trend. The government needs to prepare policies to accommodate growth, especially those that impact people's welfare.
+
+## Gender Population 

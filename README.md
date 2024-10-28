@@ -332,5 +332,6 @@ fig.update_xaxes(
 fig.show()
 
 ```
+![Indonesian Population Projection](datavisual/idnprojection2020-2100.png)
 ### Indonesia Projection Population 2020 to 2100
 

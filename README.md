@@ -283,7 +283,7 @@ print(populationprojection)
 16   2100   306025531
 
 ```
-## Population Projection Indonesia 2020-2100
+### Population Projection Indonesia 2020-2100
 ```py
 
 # Creaate visual basic graph
@@ -332,4 +332,5 @@ fig.update_xaxes(
 fig.show()
 
 ```
+### Indonesia Projection Population 2020 to 2100
 

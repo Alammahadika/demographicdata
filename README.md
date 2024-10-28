@@ -196,3 +196,45 @@ datapopulationcensus = pd.Data.Frame({
   'Census':[255.587,258.496,261.355,264.161,266.911,270.209,272.682,275.773,278.696,281.603]
 })
 ```
+## Population Growth 2015-2024
+```py
+## if want create line visual basic graph
+import pandas as pd
+import matplotlib.pyplot as plt
+
+plt.figure(figsize=(10, 6))
+plt.plot(datapopulationcensus['Years'], datapopulationcensus['Census'],
+color ='b', linewidth=2)
+
+plt.fill_between(datapopulationcensus['Years'], datapopulationcensus['Census'],
+color ='blue', alpha = 0.1)
+
+plt.title('Population Growth 2015-2024')
+plt.xlabel('Year')
+plt.ylabel('Population')
+plt.show()
+
+
+# visual from plotly.graph
+import plotly.graph_objects as go
+
+fig = go.Figure()
+fig.add_trace(go.Scatter(
+  x=datapopulationcensus['Years'],
+  y=datapopulationcensus['Census'],
+  mode='lines',
+  line=dict(color='red'),
+  fill = 'tozeroy',
+  name ='Population Growth'))
+
+fig.update_layout(title="Indonesia Population Growth 2015-2024",
+xaxis_title="Years",
+yaxis_title="Population",
+template="plotly_white")
+
+fig.show()
+
+```
+
+
+

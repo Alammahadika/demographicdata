@@ -235,6 +235,5 @@ template="simple_white")
 fig.show()
 
 ```
-
-
+![Indonesia Population](datavisual/indonesiapopulationgrowth.png)
 

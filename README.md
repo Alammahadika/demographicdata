@@ -238,4 +238,4 @@ fig.show()
 ![Indonesia Population](datavisual/indonesiapopulationgrowth.png)
 
 ## Indonesia Population Growth
-
+The population of Indonesia from 2015 to 2024 continues to increase, with a stable growth trend. The government needs to prepare policies to accommodate growth, especially those that impact people's welfare.

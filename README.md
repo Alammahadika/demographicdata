@@ -169,6 +169,24 @@ This section makes a basic analysis to display the population census in Indonesi
 
 ### Data Base 
 ```py
+import pandas as pd
+import csv 
 
+# import dataset 
+datapopulationcensus = pd.read_csv("/Users/mymac/Desktop/Data Github/datapopulationcensus.csv", delimiter=';', header = None)
+datapopulationcensus = datapopulationcensus.iloc[1:]
+datapopulationcensus.columns = ['Years', 'Census']
+print(datapopulationcensus)
 
+ Years   Census
+1   2015  255.587
+2   2016  258.496
+3   2017  261.355
+4   2018  264.161
+5   2019  266.911
+6   2020  270.209
+7   2021  272.682
+8   2022  275.773
+9   2023  278.696
+10  2024  281.603
 ```

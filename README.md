@@ -240,9 +240,9 @@ fig.show()
 ### Indonesia Population Growth
 The population of Indonesia from 2015 to 2024 continues to increase, with a stable growth trend. The government needs to prepare policies to accommodate growth, especially those that impact people's welfare.
 
-## Population Projection 
+## Indonesia Population Projection 2020-2100
 This section also makes an analysis of the population projection of Indonesia from 2020 to 2100, data collection form [Country Meters](https://countrymeters.info/en/Indonesia) Purpose of Population Projections Population projections in the field of demography are estimates of the population in the future.
-# Data Base
+### Data Base
 ```py
 import pandas as pd
 import csv
@@ -282,7 +282,54 @@ print(populationprojection)
 15   2095   309025670
 16   2100   306025531
 
-````
+```
+## Population Projection Indonesia 2020-2100
+```py
 
+# Creaate visual basic graph
 
+import pandas as pd
+import matplotlib.pyplot as plt
+
+plt.figure(figsize=(10, 6))
+plt.plot(populationprojection['Years'],populationprojection['Population'],
+color= 'b', linewidth=2)
+
+plt.fill_between(populationprojection['Years'],populationprojection['Population'],
+color = 'blue', alpha =0.1)
+plt.title("Population Projection 2020-2100")
+plt.xlabel('Year')
+plt.ylabel('Population')
+plt.show()
+
+import pandas as pd
+import plotly.graph_objects as go
+
+# graph with plotly
+fig = go.Figure()
+fig.add_trace(go.Scatter(
+    x=populationprojection['Years'],
+    y=populationprojection['Population'],
+    mode='lines',  # Garis dan titik data
+    line=dict(color='red'),
+    fill='tozeroy',  # Mengisi area di bawah garis
+    name='Population Growth'
+))
+
+# setting layout
+fig.update_layout(
+    title="Indonesia Population Projection 2020-2100",
+    xaxis_title="Years",
+    yaxis_title="Population",
+    template="simple_white"
+)
+
+fig.update_xaxes(
+  tickmode='linear',
+  dtick=5
+)
+# show graph
+fig.show()
+
+```
 

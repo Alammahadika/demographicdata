@@ -230,7 +230,7 @@ fig.add_trace(go.Scatter(
 fig.update_layout(title="Indonesia Population Growth 2015-2024",
 xaxis_title="Years",
 yaxis_title="Population",
-template="plotly_white")
+template="simple_white")
 
 fig.show()
 

@@ -339,8 +339,70 @@ This graph shows that Indonesia will experience rapid population growth almost i
 ## Indonesia Population Gender
 This section is for the analysis of the population gender between Men and Women in Indonesia from 2018 to 2023. And I collect data from [Central Bureau of Statistics of Indonesia](https://www.bps.go.id/en/statistics-table/3/WVc0MGEyMXBkVFUxY25KeE9HdDZkbTQzWkVkb1p6MDkjMw==/population-by-age-groups-and-sex.html?year=2023).
 
+### Create Manual Data Base or Data Frame 
 ``` py
 
+import pandas as pd
+ 
+genderpopulation = {
+    'Year': [2018, 2019, 2020, 2021, 2022, 2023],
+    'Man': [133.136, 143.657, 136.611, 137.871, 139.388, 140.786],
+    'Woman': [131.879, 133.416, 133.545, 134.811, 136.384, 137.909]
+}
+
+genderpopulation = pd.DataFrame(genderpopulation)
+
+```
+### Indonesia Population Gender Analysis 
+
+```py
+import plotly.graph_objects as go
+
+fig = go.Figure()
+
+# add man population horizontal bar (negative point for section left)
+fig.add_trace(go.Bar(
+    y=genderpopulation['Year'],
+    x=[-1 * val for val in genderpopulation['Man']],  # negative point for bar left
+    orientation='h',
+    name='Man',
+    marker=dict(color='blue'),
+    text=[f"{val} M" for val in genderpopulation['Man']],  #add population label
+    textposition='inside'  # Posisi teks di dalam bar
+))
+
+#  add woman population for bar horizontal
+fig.add_trace(go.Bar(
+    y=genderpopulation['Year'],
+    x=genderpopulation['Woman'],  # positive point in right
+    orientation='h',
+    name='Woman',
+    marker=dict(color='red'),
+    text=[f"{val} M" for val in genderpopulation['Woman']],  # add label population
+    textposition='inside'  # Posisi teks di dalam bar position text in the bar
+))
+
+# setting 
+fig.update_layout(
+    title='Gender Populationin Indonesia 2018-2023', 
+    xaxis=dict(
+        title='Population (in millions)',
+        tickvals=[-150, -100, -50, 0, 50, 100, 150],
+        ticktext=['150', '100', '50', '0', '50', '100', '150'],
+    ),
+    yaxis=dict(
+        title='Year',
+        tickmode='array',
+        tickvals=genderpopulation['Year'],
+        ticktext=genderpopulation['Year']
+    ),
+    barmode='relative',
+    bargap=0.1,
+    plot_bgcolor='white'
+)
+
+# show plot
+fig.show()
 
 
 ```

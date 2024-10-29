@@ -337,7 +337,7 @@ fig.show()
 This graph shows that Indonesia will experience rapid population growth almost in the middle of the century, but after that the population will decline. For example, from 2020 to 2060 population growth will be very stable, and from 2060 to 2100 the population will decline, which has implications for employment challenges, social needs, and public policy.
 
 ## Indonesia Population Gender
-This part for analysis population gender between Man and Woman in Indonesia from 2018 to 2023. And I collection data from the [Central Statistics Agency of Indonesia](https://www.bps.go.id/en/statistics-table/3/WVc0MGEyMXBkVFUxY25KeE9HdDZkbTQzWkVkb1p6MDkjMw==/population-by-age-groups-and-sex.html?year=2023).
+This section is for the analysis of the population gender between Men and Women in Indonesia from 2018 to 2023. And I collect data from [Central Bureau of Statistics of Indonesia](https://www.bps.go.id/en/statistics-table/3/WVc0MGEyMXBkVFUxY25KeE9HdDZkbTQzWkVkb1p6MDkjMw==/population-by-age-groups-and-sex.html?year=2023).
 
 ``` py
 

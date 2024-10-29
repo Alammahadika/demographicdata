@@ -368,7 +368,7 @@ fig.add_trace(go.Bar(
     name='Man',
     marker=dict(color='blue'),
     text=[f"{val} M" for val in genderpopulation['Man']],  #add population label
-    textposition='inside'  # Posisi teks di dalam bar
+    textposition='inside'  #  text position in the bar
 ))
 
 #  add woman population for bar horizontal
@@ -379,7 +379,7 @@ fig.add_trace(go.Bar(
     name='Woman',
     marker=dict(color='red'),
     text=[f"{val} M" for val in genderpopulation['Woman']],  # add label population
-    textposition='inside'  # Posisi teks di dalam bar position text in the bar
+    textposition='inside'  # position text in the bar 
 ))
 
 # setting 

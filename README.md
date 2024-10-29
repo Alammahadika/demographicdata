@@ -335,3 +335,4 @@ fig.show()
 ![Indonesian Population Projection](datavisual/idnprojection2020-2100.png)
 ### Indonesia Projection Population 2020 to 2100
 This graph shows that Indonesia will experience rapid population growth almost in the middle of the century, but after that the population will decline. For example, from 2020 to 2060 population growth will be very stable, and from 2060 to 2100 the population will decline, which has implications for employment challenges, social needs, and public policy.
+

@@ -406,3 +406,5 @@ fig.show()
 
 
 ```
+## Gender Population 2018-2023
+By looking at this visual, you can calculate the gender or compression between the Male and Female population in each year. If you have data from 2018, the male population was 133.136 million and the female population was 131.879 million. In 2019, the male population increased to 143.657 million and the female population to 133.416 million. In 2020 to 2023 there was a fluctuation, but the trend shows a slight increase in both sexes.

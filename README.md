@@ -419,7 +419,7 @@ By looking at this visual, you can calculate the gender or compression between t
 library(readxl)
 populationgroupage <- read_excel("~/Desktop/Data Github/populationgroupage.xlsx")
 View(populationgroupage)
-print(populationgroupage)
+print(populationgroupage, n=96)
 
 | Year|Group Age |    Man|   Women|
 |----:|:---------|------:|-------:|

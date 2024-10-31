@@ -618,3 +618,4 @@ plot_2023 <- ggplot(populationgroupage %>% filter(Year == 2023), aes(x = reorder
 
 
 ```
+![Indonesia Population](datavisual/genderpopulation20182023.png)

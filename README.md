@@ -619,3 +619,6 @@ plot_2023 <- ggplot(populationgroupage %>% filter(Year == 2023), aes(x = reorder
 
 ```
 ![Indonesia Population](datavisual/genderpopulation20182023.png)
+
+## Indonesia Population Gender Graph Pyramid
+From the visual pyramid, it shows the population distribution from the youngest age group (0-4) to the oldest (75+). The shape of the pyramid shows the proportion of young age, productive age, and old age in the population. If there are more young people such as 0-14 years old, the population growth is greater and the proportion is greater in the elderly population.

@@ -524,8 +524,97 @@ print(populationgroupage, n=96) # view all rows and columns
 ### Analysis Graph Indonesia Population by Age Group and Gender 
 
 ```r
+populationgroupage <-populationgroupage %>%
+  mutate(`Group Age` = factor(`Group Age`, levels = c("0-4", "5-9", "10-14", "15-19", "20-24", "25-29", "30-34", 
+                                                      "35-39", "40-44", "45-49", "50-54", "55-59", "60-64", 
+                                                      "65-69", "70-74", "75")))
+
+library(dplyr)
+library(ggplot2)
+library(patchwork)
+
+# Filter data each year
+data_2018 <-populationgroupage %>% filter(Year==2018)
+data_2019 <-populationgroupage %>% filter(Year==2019)
+data_2020 <-populationgroupage %>% filter(Year==2020)
+data_2021 <-populationgroupage %>% filter(Year==2021)
+data_2022 <-populationgroupage %>% filter(Year==2022)
+data_2023 <-populationgroupage %>% filter(Year==2023)
 
 
+plot_2018 <- ggplot(data_2018, aes(x = reorder(`Group Age`, -as.numeric(gsub("\\+", "", `Group Age`))))) +
+  geom_bar(aes(y = Man, fill = "Man"), stat = "identity", position = "identity") +
+  geom_bar(aes(y = -Women, fill = "Women"), stat = "identity", position = "identity") +
+  scale_y_continuous(labels = abs) +
+  labs(title = "2018",
+       x = "Age Group",
+       y = "Population",
+       fill = "Gender") +
+  theme_minimal() +
+  coord_flip() +
+  scale_fill_manual(values = c("Man" = "darkblue", "Women" = "darkred"))
+
+plot_2019 <- ggplot(data_2019, aes(x = reorder(`Group Age`, -as.numeric(gsub("\\+", "", `Group Age`))))) +
+  geom_bar(aes(y = Man, fill = "Man"), stat = "identity", position = "identity") +
+  geom_bar(aes(y = -Women, fill = "Women"), stat = "identity", position = "identity") +
+  scale_y_continuous(labels = abs) +
+  labs(title = "2019",
+       x = "Age Group",
+       y = "Population",
+       fill = "Gender") +
+  theme_minimal() +
+  coord_flip() +
+  scale_fill_manual(values = c("Man" = "darkblue", "Women" = "darkred"))
+
+plot_2020 <- ggplot(data_2020, aes(x = reorder(`Group Age`, -as.numeric(gsub("\\+", "", `Group Age`))))) +
+  geom_bar(aes(y = Man, fill = "Man"), stat = "identity", position = "identity") +
+  geom_bar(aes(y = -Women, fill = "Women"), stat = "identity", position = "identity") +
+  scale_y_continuous(labels = abs) +
+  labs(title = "2020",
+       x = "Age Group",
+       y = "Population",
+       fill = "Gender") +
+  theme_minimal() +
+  coord_flip() +
+  scale_fill_manual(values = c("Man" = "darkblue", "Women" = "darkred"))
+
+plot_2021 <- ggplot(data_2021, aes(x = reorder(`Group Age`, -as.numeric(gsub("\\+", "", `Group Age`))))) +
+  geom_bar(aes(y = Man, fill = "Man"), stat = "identity", position = "identity") +
+  geom_bar(aes(y = -Women, fill = "Women"), stat = "identity", position = "identity") +
+  scale_y_continuous(labels = abs) +
+  labs(title = "2021",
+       x = "Age Group",
+       y = "Population",
+       fill = "Gender") +
+  theme_minimal() +
+  coord_flip() +
+  scale_fill_manual(values = c("Man" = "darkblue", "Women" = "darkred"))
+
+plot_2022 <- ggplot(data_2022, aes(x = reorder(`Group Age`, -as.numeric(gsub("\\+", "", `Group Age`))))) +
+  geom_bar(aes(y = Man, fill = "Man"), stat = "identity", position = "identity") +
+  geom_bar(aes(y = -Women, fill = "Women"), stat = "identity", position = "identity") +
+  scale_y_continuous(labels = abs) +
+  labs(title = "2022",
+       x = "Age Group",
+       y = "Population",
+       fill = "Gender") +
+  theme_minimal() +
+  coord_flip() +
+  scale_fill_manual(values = c("Man" = "darkblue", "Women" = "darkred"))
+
+plot_2023 <- ggplot(populationgroupage %>% filter(Year == 2023), aes(x = reorder(`Group Age`, -as.numeric(gsub("\\+", "", `Group Age`))))) +
+  geom_bar(aes(y = Man, fill = "Man"), stat = "identity", position = "identity") +
+  geom_bar(aes(y = -Women, fill = "Women"), stat = "identity", position = "identity") +
+  scale_y_continuous(labels = abs) +
+  labs(title = "2023", x = "Age Group", y = "Population", fill = "Gender") +
+  theme_minimal() + coord_flip() +
+  scale_fill_manual(values = c("Man" = "darkblue", "Women" = "darkred"))
+
+# Arrange all plots in a single view with a main title
+
+(plot_2018 | plot_2019) / (plot_2020 | plot_2021) / (plot_2022 | plot_2023) +
+  plot_annotation(title = "Gender Population Indonesia 2018-2023",
+                  theme = theme(plot.title = element_text(size = 15, face = "bold", hjust = 0.5))) 
 
 
 ```

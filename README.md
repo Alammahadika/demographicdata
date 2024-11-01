@@ -693,3 +693,4 @@ fig.update_layout(
 fig.show()
 
 ```
+![Population Indonesia](datavisual/ruralurbanpop.png)

@@ -627,7 +627,69 @@ From the visual pyramid, it shows the population distribution from the youngest 
 This section explains about the number of rural and urban population in Indonesia from 1955 to 2024, data collection from World Meters. Then make a simple visual analysis.
 
 ```py
+import pandas as pd
+import csv
 
+# import data 
+ruralurbanidn = pd.read_csv("/Users/mymac/Desktop/Data Github/ruralurbanidn.csv", delimiter=';', header = None)
 
+ruralurbanidn = ruralurbanidn.iloc[1:]
+ruralurbanidn.columns = ["Years", "Urban", "Rural"]
+print(ruralurbanidn)
+
+# or create data frame manual
+data = {
+    "Years": [1960, 1965, 1970, 1975, 1980, 1985, 1990, 1995, 2000, 2005, 2010, 2015, 2020, 2024],
+    "Urban": [12805184, 15838170, 19603959, 25252096, 32601807, 43049412, 55491343, 71053577, 88851487, 104155654, 121052980, 137634761, 154188546, 167176839],
+    "Rural": [75490886, 85526960, 96053536, 106591752, 116348733, 123726773, 128009755, 128834480, 127226303, 126715996, 125252342, 124164488, 120626320, 116311092]
+}
+ruralurbanidn = pd.DataFrame(data)
+
+# Setting column 
+Years = ruralurbanidn["Years"]
+Urban_Population = ruralurbanidn["Urban"]
+Rural_Population = ruralurbanidn["Rural"]
+
+```
+
+### Rural & Urban Population Indonesia 
+```py
+fig = go.Figure()
+
+# Menambahkan data Rural
+fig.add_trace(go.Scatter(
+    x=Years,
+    y=Rural_Population,
+    mode='none',
+    stackgroup='one',  
+    name='Rural',
+    fillcolor='blue'  
+))
+
+# Menambahkan data Urban
+fig.add_trace(go.Scatter(
+    x=Years,
+    y=Urban_Population,
+    mode='none',
+    stackgroup='one',  
+    name='Urban',
+    fillcolor='red'  
+))
+
+# Menambahkan layout
+fig.update_layout(
+    title='Indonesia: Urban & Rural Population',
+    xaxis_title='Years',
+    yaxis_title='Population in Millions',
+    template='plotly_white',
+    xaxis=dict(
+        tickmode='array',          #  array for show labels
+        tickvals=Years,            #  show all years in x
+        ticktext=[str(year) for year in Years]  #  show label in text
+    )
+)
+
+# show figure
+fig.show()
 
 ```

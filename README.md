@@ -694,3 +694,6 @@ fig.show()
 
 ```
 ![Population Indonesia](datavisual/ruralurbanpop.png)
+
+## Graph Visual Population Urban and Rural in Indonesia 
+This graph shows an accurate picture of demographic growth in Indonesia, showing that in recent decades, Indonesia has experienced significant urbanization with a larger urban population and a larger rural population.

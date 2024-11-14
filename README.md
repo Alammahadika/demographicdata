@@ -700,3 +700,4 @@ This graph shows an accurate picture of demographic growth in Indonesia, showing
 
 
 ## Demography & Population in Jakarta
+This section explains about population data in each region of Jakarta such as Central Jakarta, South Jakarta, North Jakarta, West Jakarta and East Jakarta. Data collection from [Central Statistics Agency](https://jakarta.bps.go.id/id/statistics-table/2/MTI3MCMy/jumlah-penduduk-menurut-kabupaten-kota-di-provinsi-dki-jakarta-.html)

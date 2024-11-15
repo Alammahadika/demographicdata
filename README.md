@@ -701,3 +701,17 @@ This graph shows an accurate picture of demographic growth in Indonesia, showing
 
 ## Demography & Population in Jakarta
 This section explains about population data in each region of Jakarta such as Central Jakarta, South Jakarta, North Jakarta, West Jakarta and East Jakarta. Data collection from [Central Statistics Agency](https://jakarta.bps.go.id/id/statistics-table/2/MTI3MCMy/jumlah-penduduk-menurut-kabupaten-kota-di-provinsi-dki-jakarta-.html)
+
+### Input Data From Open Street Map (OSM)
+```r
+  library(tidyverse)
+  library(sf)
+  library(osmdata) # package for open street map
+
+ jakarta_bb <-getbb("Jakarta, Indonesia")
+  jakarta_osm <- opq(jakarta_bb) %>%
+    add_osm_feature(key = "admin_level", value = "6") %>%
+    osmdata_sf()
+jakarta_boundaries <- jakarta_osm$osm_multipolygons
+
+```

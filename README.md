@@ -738,3 +738,6 @@ library(ggplot)
 
 ```
 ![Jakarta Population](datavisual/jakartamapspopulation.png)
+
+### Jakarta Population 2023
+If South Jakarta, which is colored yellow, has a larger population, conversely Central Jakarta, which is colored dark purple, has a relatively smaller population compared to other areas of Jakarta.

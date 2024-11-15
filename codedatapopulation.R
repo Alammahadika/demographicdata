@@ -199,4 +199,37 @@ plot_2023 <- ggplot(populationgroupage %>% filter(Year == 2023), aes(x = reorder
                   theme = theme(plot.title = element_text(size = 15, face = "bold", hjust = 0.5))) 
 
 
+
+# data jakarta population 
+
+  library(tidyverse)
+  library(sf)
+  library(osmdata) # package for open street map
+
+ jakarta_bb <-getbb("Jakarta, Indonesia")
+  jakarta_osm <- opq(jakarta_bb) %>%
+    add_osm_feature(key = "admin_level", value = "6") %>%
+    osmdata_sf()
+jakarta_boundaries <- jakarta_osm$osm_multipolygons
+
+
+library(ggplot)
+
+ jakartapopulation <- data.frame(
+    Region = c("South Jakarta", "East Jakarta", "Central Jakarta", "West Jakarta", "North Jakarta"),
+    Population = c(2235606, 3079618, 1049314, 2470054, 1808985)
+  )
+ 
+  jakarta_boundaries$Region <- c("South Jakarta", "East Jakarta", "Central Jakarta", "West Jakarta", "North Jakarta")
+  jakarta_boundaries <- merge(jakarta_boundaries, jakartapopulation, by = "Region")
+  
+  ggplot() +
+    geom_sf(data = jakarta_boundaries, aes(fill = Population), color = "black", size = 2) +
+    scale_fill_viridis_b(option = "B") +
+    theme_minimal() +
+    labs(title = "Jakarta Population in 2023",
+         fill = "Population")
+
+
+
   

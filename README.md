@@ -737,3 +737,4 @@ library(ggplot)
          fill = "Population")
 
 ```
+![Jakarta Population](datavisual/jakartamapspopulation.png)
